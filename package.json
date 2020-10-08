@@ -1,0 +1,13 @@
+{
+  "name": "fake-json-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "json-server -w ./data/db.json -H 0.0.0.0 -p 8000 -i _id",
+    "server-client": "json-server -w ./data/db.json -H 0.0.0.0 -p 8000 -i _id -s client"
+  },
+  "dependencies": {
+    "json-server": "^0.16.2"
+  }
+}

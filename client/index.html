@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redit MDFK</title>
+    <script src="https://pagecdn.io/lib/faker/3.1.0/locales/en/faker.en.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script defer src="master.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section id="users">
+        <h5>
+          User
+          <span class="new badge left" data-badge-caption=""></span>
+          <a
+            onclick="addUser()"
+            class="btn-floating waves-effect waves-light red right"
+            ><i class="material-icons">add</i></a
+          >
+        </h5>
+
+        <table class="highlight striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Photo</th>
+              <th>Gender</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </section>
+      <section id="posts">
+        <h5>
+          Posts
+          <span class="new badge left" data-badge-caption=""></span>
+          <a
+            onclick="addPost()"
+            class="btn-floating waves-effect waves-light red right"
+            ><i class="material-icons">add</i></a
+          >
+        </h5>
+
+        <table class="highlight striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Comment Title</th>
+              <th>User Id</th>
+              <th>Description</th>
+              <th>Votes</th>
+              <th>Published At</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </section>
+      <section id="comments">
+        <h5>
+          Comments
+          <span class="new badge left" data-badge-caption=""></span>
+          <a
+            onclick="addComment()"
+            class="btn-floating waves-effect waves-light red right"
+            ><i class="material-icons">add</i></a
+          >
+        </h5>
+
+        <table class="highlight striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Comment</th>
+              <th>Votes</th>
+              <th>User Id</th>
+              <th>Post Id</th>
+              <th>Parent Id</th>
+              <th>Published At</th>
+            </tr>
+          </thead>
+
+          <tbody></tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
