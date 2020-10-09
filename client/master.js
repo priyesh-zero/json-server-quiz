@@ -33,7 +33,10 @@ const globalTemplates = {
 
 // generic get data
 const getData = async (url) => {
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    method: "GET",
+    headers: { Authorization: "Bearer 41b8494f-0118-4d9f-8f9f-10df9805ce1a" },
+  });
   return response.json();
 };
 
@@ -49,11 +52,12 @@ const postData = async (section, data) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer 41b8494f-0118-4d9f-8f9f-10df9805ce1a",
     },
     body: JSON.stringify(data),
   });
   console.log(await response.json());
-  globalState[`${section}`] = await getData(`/${section}`);
+  globalState[`${section}`] = await getData(`/api/${section}`);
   globalState[`${section}-ids`] = globalState[`${section}`].map(
     (section) => section._id
   );

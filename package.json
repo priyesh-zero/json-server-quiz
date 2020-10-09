@@ -4,10 +4,15 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "server": "json-server -w ./data/db.json -H 0.0.0.0 -p 8000 -i _id",
-    "server-client": "json-server -w ./data/db.json -H 0.0.0.0 -p 8000 -i _id -s client"
+    "server:json": "json-server -w ./data/db.json -p 8000 -i _id",
+    "server:docker": "json-server -w ./data/db.json -H 0.0.0.0 -p 8000 -i _id",
+    "server:stack": "json-server -w ./data/db.json -H 0.0.0.0 -p 8000 -i _id -s client",
+    "server:dev": "nodemon server.js"
   },
   "dependencies": {
     "json-server": "^0.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
